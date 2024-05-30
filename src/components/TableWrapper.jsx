@@ -54,11 +54,11 @@ export const TableWrapper = ({ inputValue, isThere, secondInput }) => {
 
         <>
 
-            <div style={{ display: "flex", gap: "10px" }}>
+            <div className="products">
 
-                <div style={{ border: "1px solid grey", padding: "10px", marginTop: "20px" }} ><Fruits fruits={fruits} setFruits={setFruits} inputValue={inputValue} isThere={isThere} secondInput={secondInput} />
+                <div className="product" ><Fruits fruits={fruits} setFruits={setFruits} inputValue={inputValue} isThere={isThere} secondInput={secondInput} />
                 </div>
-                <div style={{ border: "1px solid grey", padding: "10px", marginTop: "20px" }}><Vegetables vegetables={vegetables} setVegetables={setVegetables} inputValue={inputValue} isThere={isThere} /></div>
+                <div className="product"><Vegetables vegetables={vegetables} setVegetables={setVegetables} inputValue={inputValue} isThere={isThere} /></div>
 
             </div>
 

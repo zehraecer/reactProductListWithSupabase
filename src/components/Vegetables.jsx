@@ -10,7 +10,7 @@ export const Vegetables = ({ vegetables, isThere, inputValue }) => {
                     return input && checkbox;
                 }).map((veggi) => (
                     <h5 key={veggi.id} style={{ textAlign: "center" }}>
-                        {`${veggi.name} - ${veggi.price} - ${String(veggi.InStock)} ₺`}
+                        {`${veggi.name} - ${veggi.price}₺ - ${String(veggi.InStock)} `}
                     </h5>
                 ))
                 }

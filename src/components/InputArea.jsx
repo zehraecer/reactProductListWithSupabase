@@ -8,7 +8,7 @@ const supabase = createClient('https://gwmohqcgjtcoddbbhwlg.supabase.co', 'eyJhb
 export const InputArea = ({ inputValue, isThere, setIsThere, setFruits, fruits, setInputValue, vegetables, setVegetables }) => {
 
     const [secondInput, setSecondInput] = useState("")
-    const [numberInput, setNumberInput] = useState(0)
+    const [numberInput, setNumberInput] = useState()
     const [inStockInput, setInStockInput] = useState(false)
     const [category, setCategory] = useState("fruits")
 
@@ -45,13 +45,13 @@ export const InputArea = ({ inputValue, isThere, setIsThere, setFruits, fruits, 
     console.log(category);
     return (
 
-        <div style={{ display: "flex", gap: "15px" }}>
+        <div className='inputArea'>
 
-            <div>
-                <input type="text" value={secondInput} onChange={(e) => setSecondInput(e.target.value)} />
-                <input type="number" value={numberInput} onChange={(e) => setNumberInput(e.target.value)} />
+            <div className='inputAddProduct'>
+                <input type="text" value={secondInput} onChange={(e) => setSecondInput(e.target.value)} placeholder='add product' />
+                <input type="number" value={numberInput} onChange={(e) => setNumberInput(e.target.value)} placeholder='price' />
 
-                <select value={inStockInput} onChange={(e) => setInStockInput(e.target.value)} >
+                <select value={inStockInput} onChange={(e) => setInStockInput(e.target.value)}  >
                     <option value="false">No</option>
                     <option value="true">There is</option>
                 </select>
@@ -59,17 +59,21 @@ export const InputArea = ({ inputValue, isThere, setIsThere, setFruits, fruits, 
                     <option value="fruits">Fruits</option>
                     <option value="Vegetables">Vegetables</option>
                 </select>
-                <button type='submit' onClick={addFruits}>Add Product</button>
-            </div>
-            <div>
-                <input type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
-
+                <button type='submit' className='button' onClick={addFruits}>Add Product</button>
             </div>
 
-            <div>
+            <div className='flex'>
 
-                <label htmlFor="">Only show products in stock</label>
-                <input type="checkbox" checked={isThere} onChange={(e) => setIsThere(e.target.checked)} />
+                <div>
+                    <input type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder='search product' />
+
+                </div>
+
+                <div className='checkbox'>
+
+                    <label htmlFor="">Only show products in stock</label>
+                    <input type="checkbox" checked={isThere} onChange={(e) => setIsThere(e.target.checked)} />
+                </div>
             </div>
         </div>
 

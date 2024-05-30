@@ -11,16 +11,26 @@ export const AppWrapper = () => {
 
     return (
         <>
-            <InputArea
-                inputValue={inputValue}
-                setInputValue={setInputValue}
-                isThere={isThere}
-                setIsThere={setIsThere}
-            />
-            <TableWrapper
-                inputValue={inputValue}
-                isThere={isThere}
-            />
+            <div className="AppWrapper">
+
+                <div>
+                    <InputArea
+                        inputValue={inputValue}
+                        setInputValue={setInputValue}
+                        isThere={isThere}
+                        setIsThere={setIsThere}
+                    />
+
+                </div>
+                <div>
+
+                    <TableWrapper
+                        inputValue={inputValue}
+                        isThere={isThere}
+                    />
+
+                </div>
+            </div>
         </>
     )
 }

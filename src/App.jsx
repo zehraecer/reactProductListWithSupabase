@@ -9,7 +9,11 @@ function App() {
 
   return (
     <>
-      <AppWrapper />
+
+      <div className='App' >
+        <AppWrapper />
+
+      </div>
     </>
   )
 }
