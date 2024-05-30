@@ -42,12 +42,12 @@ export const TableWrapper = ({ inputValue, isThere, secondInput }) => {
 
     useEffect(() => {
         getFruits();
-    }, []);
+    }, [fruits]);
 
 
     useEffect(() => {
         getVegetables();
-    }, []);
+    }, [vegetables]);
 
     return (
 

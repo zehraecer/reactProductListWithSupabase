@@ -13,6 +13,7 @@ export const InputArea = ({ inputValue, isThere, setIsThere, setFruits, fruits, 
     const [category, setCategory] = useState("fruits")
 
 
+
     async function addFruits() {
 
         const table = category === "fruits" ? "Fruits" : "Vegetables";
@@ -39,9 +40,11 @@ export const InputArea = ({ inputValue, isThere, setIsThere, setFruits, fruits, 
 
             setVegetables([...vegetables, ...data]);
         }
+
         setSecondInput('');
 
     }
+
     console.log(category);
     return (
 
